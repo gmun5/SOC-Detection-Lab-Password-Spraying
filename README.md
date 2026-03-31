@@ -28,6 +28,7 @@ Once the environment was established, I downloaded and configured Atomic Red Tea
 - Windows Powershell
 - Windows Event Viewer
 - Wazuh Cloud (SIEM & XDR)
+- Sysmon
 - Atomic Red Team T1110.003 TestNumbers 1
 
 ## Screenshots
