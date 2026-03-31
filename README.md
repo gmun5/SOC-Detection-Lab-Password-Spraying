@@ -3,31 +3,32 @@
 ## Objective
 
 
-The Password Spraying Detection Lab aimed to simulate a real world authentication-based attack and analyze its detection within a SIEM environment. The primary focus was to generate failed login activity using Atomic Red Team (MITRE T1110.003) in a Windows VM and investigate how these events are logged, ingested, and correlated in a Wazuh SIEM. This hands-on experience was designed to develop practical skills in log analysis, threat detection, and attack pattern identification associated with credential-based attacks.
+The Password Spraying Detection Lab aimed to emulate a real world authentication-based attack and analyze its detection within a SIEM environment. The primary focus was to generate failed login activity using Atomic Red Team tests (MITRE T1110.003) in a Windows VM and investigate how these events are logged, ingested, and correlated in a Wazuh SIEM. This hands-on experience was designed to develop practical skills in log analysis, threat detection, and attack pattern identification associated with credential-based attacks.
 
 ### Setup
 
 
-To build this lab environment, I created an Windows 11 virtual machine using VMware Fusion on my MacBook to serve as the target system for attack simulation and log generation. Next, I set an Ubuntu virtual machine up with the intention of deploying a local Wazuh SIEM. However, due to hardware limitations and insufficient RAM on my host machine, Wazuh was unable to run. As an alternative, I utilized Wazuh Cloud as the centralized SIEM and XDR platform to monitor the Windows 11 VM telemetry and detect security incidents. I began by deploying Wazuh agents in the Windows VM to collect and forward security logs to the Wazuh Cloud platform.
+To build this lab environment, I created an Windows 11 virtual machine using VMware Fusion on my MacBook to serve as the target system for attack simulation and log generation. Next, I set an Ubuntu virtual machine up with the intention of deploying a local Wazuh SIEM. However, due to hardware limitations and insufficient RAM on my host machine, Wazuh was unable to run. As an alternative, I utilized Wazuh Cloud as the centralized SIEM and XDR platform to monitor the Windows 11 VM telemetry and detect security incidents. I began by deploying a Wazuh agent in the Windows VM to collect and forward security logs to the Wazuh Cloud platform.
 
-Once the environment was established, I configured a Windows Security exclusion for the Atomic Red Team directory to prevent endpoint protection from blocking or interrupting attack simulations. I then used Atomic Red Team via Windows PowerShell to simulate a password spraying attack aligned with MITRE ATT&CK technique T1110.003. This technique attempts authentication across multiple user accounts using a single or limited set of passwords, generating repeated failed login attempts while avoiding account lockouts. The execution of this attack on the Windows VM produced multiple failed authentication event logs (Event ID 4625), which were then collected and analyzed within Wazuh Cloud to identify patterns associated with credential-based attacks.
+Once the environment was established, I configured a Windows Security exclusion for the Atomic Red Team directory to prevent endpoint protection from blocking or interrupting attack emulation. I then ran Atomic Red Team tests via Windows PowerShell to emulate a password spraying attack mapped to MITRE ATT&CK technique T1110.003. This technique attempts authentication across multiple user accounts using a single or limited set of passwords, generating repeated failed login attempts while avoiding account lockouts. The execution of this attack on the Windows VM produced multiple failed authentication event logs (Event ID 4625), which were then collected and analyzed within Wazuh Cloud to identify patterns associated with credential-based attacks.
 
 ### Skills Learned
 
 
-- Gained experience performing cybersecurity risk assessments and identifying organizational vulnerabilities
-- Developed an understanding of risk analysis methods to prioritize security issues effectively
-- Learned how to evaluate security controls using frameworks like the NIST Cybersecurity Framework (CSF)
-- Built the ability to translate technical findings into clear, business-friendly recommendations
-- Strengthened communication skills through stakeholder interviews and presentations
-- Enhanced critical thinking in identifying security gaps and proposing mitigation strategies
+- Hands-on experience analyzing Windows Security logs for authentication-related investigations
+- Practical use of a SIEM (Wazuh Cloud) to filter, search, and investigate security events
+- Understanding of how credential-based attacks are reflected in log data and detected within a SIEM
+- Ability to recognize password spraying activity through patterns of repeated failed logins across multiple accounts
+- Improved judgment in distinguishing normal system activity from potential security threats
 
 ### Tools Used
 
 
-- NIST Cybersecurity Framework (CSF) for control evaluation
-- Risk assessment and auditing methodologies
-- Security reporting & documentation
+- Windows 11 Virtual Machine (VMware Fusion)
+- Windows Powershell
+- Windows Event Viewer
+- Wazuh Cloud (SIEM & XDR)
+- Atomic Red Team T1110.003 Test 1
 
 ## Screenshots
 
