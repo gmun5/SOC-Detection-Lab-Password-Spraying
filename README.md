@@ -8,9 +8,9 @@ The Password Spraying Detection Lab aimed to emulate a real world authentication
 ### Setup
 
 
-To build this lab environment, I created an Windows 11 virtual machine using VMware Fusion on my MacBook to serve as the target system for attack simulation and log generation. Next, I set an Ubuntu virtual machine up with the intention of deploying a local Wazuh SIEM. However, due to hardware limitations and insufficient RAM on my host machine, Wazuh was unable to run. As an alternative, I utilized Wazuh Cloud as the centralized SIEM and XDR platform to monitor the Windows 11 VM telemetry and detect security incidents. I began by deploying a Wazuh agent in the Windows VM to collect and forward security logs to the Wazuh Cloud platform.
+To build this lab environment, I created and configured my own Windows 11 virtual machine using VMware Fusion on my MacBook to serve as the target system for attack simulation and log generation. I also installed and configured Sysmon to enhance system visibility and capture detailed event logs. Next, I set up an Ubuntu virtual machine with the intention of deploying a local Wazuh SIEM. However, due to hardware limitations and insufficient RAM on my host machine, Wazuh was unable to run. As an alternative, I utilized Wazuh Cloud as the centralized SIEM and XDR platform to monitor the Windows 11 VM telemetry and detect security incidents. I then deployed a Wazuh agent on the Windows VM to collect and forward security logs to the Wazuh Cloud platform.
 
-Once the environment was established, I configured a Windows Security exclusion for the Atomic Red Team directory to prevent endpoint protection from blocking or interrupting attack emulation. I then ran Atomic Red Team tests via Windows PowerShell to emulate a password spraying attack mapped to MITRE ATT&CK technique T1110.003. This technique attempts authentication across multiple user accounts using a single or limited set of passwords, generating repeated failed login attempts while avoiding account lockouts. The execution of this attack on the Windows VM produced multiple failed authentication event logs (Event ID 4625), which were then collected and analyzed within Wazuh Cloud to identify patterns associated with credential-based attacks.
+Once the environment was established, I downloaded and configured Atomic Red Team on the Windows VM to enable controlled attack emulation. I then configured a Windows Security exclusion for the Atomic Red Team directory to prevent endpoint protection from blocking or interrupting attack execution. Next, I ran Atomic Red Team tests via Windows PowerShell to emulate a password spraying attack mapped to MITRE ATT&CK technique T1110.003. This technique attempts authentication across multiple user accounts using a single or limited set of passwords, generating repeated failed login attempts while avoiding account lockouts. The execution of this attack on the Windows VM produced multiple failed authentication event logs (Event ID 4625), which were then collected and analyzed within Wazuh Cloud to identify patterns associated with credential-based attacks.
 
 ### Skills Learned
 
@@ -28,39 +28,39 @@ Once the environment was established, I configured a Windows Security exclusion 
 - Windows Powershell
 - Windows Event Viewer
 - Wazuh Cloud (SIEM & XDR)
-- Atomic Red Team T1110.003 Test 1
+- Atomic Red Team T1110.003 TestNumbers 1
 
 ## Screenshots
 
 
-<img width="680" height="880" alt="Screenshot 2026-03-25 at 3 45 05 PM" src="https://github.com/user-attachments/assets/ac929d8f-9fbd-4336-adc5-82f31c9fcfe1" />
+<img width="1920" height="958" alt="Screenshot 2026-03-29 at 7 00 56 PM" src="https://github.com/user-attachments/assets/d424586f-20aa-4ec8-a7bd-20b54b758ccc" />
 
 *Ref 1: Audit Page 1*
 
-<img width="680" height="880" alt="Screenshot 2026-03-25 at 3 45 15 PM" src="https://github.com/user-attachments/assets/1dc5ca4f-439d-4a6c-9821-bf5ee71c1e0b" />
+<img width="1920" height="176" alt="Screenshot 2026-03-30 at 2 52 26 AM" src="https://github.com/user-attachments/assets/a81a54f0-ec9e-454c-b5f9-b040ffab5219" />
+
+*Ref 1: Audit Page 1*
+
+<img width="1920" height="1080" alt="Screenshot 2026-03-31 at 1 10 58 AM" src="https://github.com/user-attachments/assets/7ed62ce3-b6af-43e2-a1bc-1ee8cfd511d0" />
 
 *Ref 2: Audit Page 2*
 
-<img width="680" height="880" alt="Screenshot 2026-03-25 at 3 45 30 PM" src="https://github.com/user-attachments/assets/e63ab1f5-8e1f-4b8b-a58c-14c146129067" />
+<img width="1920" height="959" alt="Screenshot 2026-03-30 at 3 00 50 AM" src="https://github.com/user-attachments/assets/3a5480dd-1e41-4300-a5c7-19481fc55194" />
 
 *Ref 3: Audit Page 3*
 
-<img width="680" height="880" alt="Screenshot 2026-03-25 at 3 45 37 PM" src="https://github.com/user-attachments/assets/f34d47b0-98e0-4e04-a7ea-b335fc88dd17" />
+<img width="1920" height="959" alt="Screenshot 2026-03-31 at 1 07 57 AM" src="https://github.com/user-attachments/assets/a385b5bb-e685-4215-a526-719f85dd3ff8" />
 
 *Ref 4: Audit Page 4*
 
-<img width="680" height="880" alt="Screenshot 2026-03-25 at 3 45 45 PM" src="https://github.com/user-attachments/assets/9514bc8f-42a5-4868-913e-41f37e9af200" />
+<img width="1920" height="959" alt="Screenshot 2026-03-30 at 3 11 50 AM" src="https://github.com/user-attachments/assets/d2fc65a3-80c9-4268-85d6-87e85a97a22a" />
 
 *Ref 5: Audit Page 5*
 
-<img width="680" height="880" alt="Screenshot 2026-03-25 at 3 45 53 PM" src="https://github.com/user-attachments/assets/1dd41c74-d654-49cd-b658-3a4e065db173" />
+<img width="1920" height="959" alt="Screenshot 2026-03-30 at 3 35 48 AM" src="https://github.com/user-attachments/assets/ab4e757a-3890-4d91-aa9e-95899373d17a" />
 
 *Ref 6: Audit Page 6*
 
-<img width="680" height="880" alt="Screenshot 2026-03-25 at 3 46 00 PM" src="https://github.com/user-attachments/assets/41c50dc2-72bd-48c3-a047-8537851c00cf" />
+<img width="1920" height="959" alt="Screenshot 2026-03-30 at 3 31 26 AM" src="https://github.com/user-attachments/assets/6e33b6f3-9c9e-4282-ba65-bd6b2ddc70ee" />
 
 *Ref 7: Audit Page 7*
-
-<img width="680" height="880" alt="Screenshot 2026-03-25 at 3 46 09 PM" src="https://github.com/user-attachments/assets/2d63efc9-1b8c-497b-9291-7e2f5e1ebecf" />
-
-*Ref 8
