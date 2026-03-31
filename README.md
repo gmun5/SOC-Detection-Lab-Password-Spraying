@@ -56,11 +56,11 @@ Once the environment was established, I downloaded and configured Atomic Red Tea
 
 <img width="1920" height="959" alt="Screenshot 2026-03-30 at 3 11 50 AM" src="https://github.com/user-attachments/assets/d2fc65a3-80c9-4268-85d6-87e85a97a22a" />
 
-*Ref 6: This screenshot shows logs filtered within the Discover tab to isolate Event ID 4625, focusing specifically on failed authentication attempts generated during the attack. In this state, each individual log entry is expanded to display all available fields, including detailed event data from the Windows endpoint. This allows for deeper inspection of each authentication failure, such as usernames, failure reasons, etc.*
+*Ref 5: This screenshot shows logs filtered within the Discover tab to isolate Event ID 4625, focusing specifically on failed authentication attempts generated during the attack. In this state, each individual log entry is expanded to display all available fields, including detailed event data from the Windows endpoint. This allows for deeper inspection of each authentication failure, such as usernames, failure reasons, etc.*
 
 <img width="1920" height="959" alt="Screenshot 2026-03-31 at 1 07 57 AM" src="https://github.com/user-attachments/assets/a385b5bb-e685-4215-a526-719f85dd3ff8" />
 
-*Ref 5: This is also in the Discover tab in Wazuh. The timeline visualization highlights a clustered spike. In this case, both Event ID 4625 and data.win.systems.systemTime are filtered to isolate failed authentication attempts generated during the attack simulation, and the time the event logs originally occurred on the Windows endpoint.*
+*Ref 6: This is also in the Discover tab in Wazuh. The timeline visualization highlights a clustered spike. In this case, both Event ID 4625 and data.win.systems.systemTime are filtered to isolate failed authentication attempts generated during the attack simulation, and the time the event logs originally occurred on the Windows endpoint.*
 
 <img width="1920" height="959" alt="Screenshot 2026-03-30 at 3 26 23 AM" src="https://github.com/user-attachments/assets/b7a775bb-6312-44ec-b632-939c8e5df97e" />
 
