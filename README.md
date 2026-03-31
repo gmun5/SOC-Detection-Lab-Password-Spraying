@@ -41,7 +41,7 @@ Once the environment was established, I downloaded and configured Atomic Red Tea
 
 <img width="1920" height="176" alt="Screenshot 2026-03-30 at 2 52 26 AM" src="https://github.com/user-attachments/assets/a81a54f0-ec9e-454c-b5f9-b040ffab5219" />
 
-*Ref 2: This captures the moment the password spraying attack (MITRE ATT&CK T1110.003) was executed using Atomic Red Team via PowerShell. The command initiates controlled authentication attempts across multiple accounts to simulate adversary behavior. This step marks the transition from a normal baseline state to active attack emulation. It is responsible for generating the failed login events observed in subsequent screenshots.*
+*Ref 2: This captures the moment the password spraying attack (MITRE ATT&CK T1110.003) was executed in PowerShell. The command initiates controlled authentication attempts across multiple accounts to simulate adversary behavior. This step marks the transition from a normal baseline state to active attack emulation. It is responsible for generating the failed login events observed in subsequent screenshots.*
 
 
 <img width="1920" height="1080" alt="Screenshot 2026-03-31 at 1 10 58 AM" src="https://github.com/user-attachments/assets/7ed62ce3-b6af-43e2-a1bc-1ee8cfd511d0" />
