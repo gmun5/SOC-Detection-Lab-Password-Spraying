@@ -1,1 +1,1 @@
-# SOC-Detection-Lab-Password-Spraying
+# SOC Detection Lab: Password Spraying
