@@ -36,7 +36,7 @@ Once the environment was established, I downloaded and configured Atomic Red Tea
 
 <img width="1920" height="958" alt="Screenshot 2026-03-29 at 7 00 56 PM" src="https://github.com/user-attachments/assets/d424586f-20aa-4ec8-a7bd-20b54b758ccc" />
 
-*Ref 1: This is the initial baseline state of the environment prior to attack execution. The Wazuh dashboard shows minimal or no alerts, indicating no active security incidents at that time. This establishes a clean starting point for comparison against post-attack activity.*
+*Ref 1: This is the initial baseline state of the environment prior to attack execution. The Wazuh dashboard overview shows minimal or no alerts, indicating no active security incidents at that time. This establishes a clean starting point for comparison against post-attack activity.*
 
 
 <img width="1920" height="176" alt="Screenshot 2026-03-30 at 2 52 26 AM" src="https://github.com/user-attachments/assets/a81a54f0-ec9e-454c-b5f9-b040ffab5219" />
